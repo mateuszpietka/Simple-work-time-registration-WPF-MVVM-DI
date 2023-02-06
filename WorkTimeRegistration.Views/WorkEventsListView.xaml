@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="WorkTimeRegistration.Views.WorkEventsListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+        <DataGrid ItemsSource="{Binding WorkEvents}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id"  Binding="{Binding Id}"/>
+                <DataGridTextColumn Width="1*" Header="Imię"  Binding="{Binding Employee.FirstName}"/>
+                <DataGridTextColumn Width="1*" Header="Nazwisko " Binding="{Binding Employee.LastName}" />
+                <DataGridTextColumn Width="1*" Header="Typ zdarzenia" Binding="{Binding WorkEventType}"/>
+                <DataGridTextColumn Width="1*" Header="Data i godzina wystąpienia" Binding="{Binding DateTime}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

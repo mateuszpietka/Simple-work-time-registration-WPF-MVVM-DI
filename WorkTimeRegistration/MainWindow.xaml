@@ -1,0 +1,29 @@
+﻿<Window x:Class="WorkTimeRegistration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkTimeRegistration"
+        xmlns:views="clr-namespace:WorkTimeRegistration.Views;assembly=WorkTimeRegistration.Views"
+        mc:Ignorable="d"
+        Title="Working time registration" Height="450" Width="800">
+    <Grid>
+        <TabControl TabStripPlacement="Top">
+            <TabItem Header="Dodaj pracownika" Width="156" Height="50">
+                <views:AddEmployeeView DataContext="{Binding AddEmployeeViewModel}"/>
+            </TabItem>
+            <TabItem Header="Pracownicy" Width="156" Height="50">
+                <views:EmployeesListView DataContext="{Binding EmployeesListViewModel}"/>
+            </TabItem>
+            <TabItem Header="Start czasu pracy" Width="156" Height="50">
+                <views:AddStartWorkView DataContext="{Binding AddStartWorkViewModel}"/>
+            </TabItem>
+            <TabItem Header="Koniec czasu pracy" Width="156" Height="50">
+                <views:AddEndWorkView DataContext="{Binding AddEndWorkViewModel}"/>
+            </TabItem>
+            <TabItem Header="Lista zdarzeń czasu pracy" Width="156" Height="50">
+                <views:WorkEventsListView DataContext="{Binding WorkEventsListViewModel}"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
