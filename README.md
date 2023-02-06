@@ -1,4 +1,5 @@
 # Simple-work-time-registration-WPF-MVVM-DI
+# About
 A simple application to register the start and end time of an employee's work.
 
 # Used tools and patterns
